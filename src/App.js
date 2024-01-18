@@ -8,6 +8,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
+    setError('');
     fetch('https://jsonplaceholder.typicode.com/users')
     .finally(() => setLoading(false))
     .then (response => response.json())
